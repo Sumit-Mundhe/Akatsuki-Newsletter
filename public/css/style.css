@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+  background-image: url("image/aa.jpg");
+  color: white;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* background: linear-gradient(130deg, rgb(228, 32, 32),  rgb(182, 24, 24), black); */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  
+}
+
+.text-center{
+  /* background: linear-gradient(130deg, rgb(228, 32, 32),  rgb(182, 24, 24), black); */
+  background-image: url("/image/aa.jpg");
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.h3{
+  text-shadow: 6px 2px 5px rgb(93, 14, 14);
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 5px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.21);
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: 3px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.21);
+}
+
+.form-signin button[type="submit"] {
+  margin-top: 5px;
+  border-radius: 3px;
+  background-color: rgba(228, 31, 31, 0.766);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.21);
+  border-top: 3px solid rgba(255, 68, 68, 0.927);
+  border-left: 3px solid rgba(255, 68, 68, 0.927);
+  border-bottom: none;
+  border-right: none;
+  text-shadow: 2px 2px 2px rgba(11, 89, 8, 0.803);
+}
+
+main{
+  background: rgba(255, 255, 255, 0.074);
+  border-radius: 10px;
+  border-top: 2px solid rgb(255, 255, 255, 0.5);
+  border-left: 2px solid rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.37);
+}
+
