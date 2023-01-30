@@ -2,6 +2,7 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const request = require("request")
 const https = require("https")
+require("dotenv").config();
 
 const app = express()
 
@@ -32,14 +33,13 @@ app.post("/", function(req,res){
 
     const jsonData = JSON.stringify(data)
 
-    const apikeyid="e6a91c64e9e44828cbf5a74b5477f84b-us12";
-    const usX="12"; // in above line we have the appid hosted on us server 12;
-    const appid="100e4b1dff";
+    const apikeyid = process.env.API_KEY ;
+    const usX = "12";
+    const appid = process.env.APP_ID;
     const url="https://us"+usX+".api.mailchimp.com/3.0/lists/"+appid;
-
     const options = {
         method: "POST",
-        auth: "sumit2:e6a91c64e9e44828cbf5a74b5477f84b-us12"
+        auth: "sumit2:"+apikeyid
     }
     const request = https.request(url, options, function(response){
         if(response.statusCode == 200){
@@ -49,7 +49,7 @@ app.post("/", function(req,res){
             res.sendFile(__dirname+"/failure.html")
         }
         response.on("data", function(data){
-            console.log(JSON.parse(data))
+            // console.log(JSON.parse(data))
         })
     })
     request.write(jsonData)
